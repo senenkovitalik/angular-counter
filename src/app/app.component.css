@@ -1,0 +1,45 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+}
+
+.triangle_container {
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+}
+
+.triangle_up {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  border-radius: 10px;
+  background-color: #bbdefb;
+  transform: rotate(45deg)
+}
+
+.triangle_down {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: -40px;
+  left: 20px;
+  border-radius: 10px;
+  background-color: #bbdefb;
+  transform: rotate(45deg)
+}
+
+.triangle_up:hover, .triangle_down:hover {
+  background-color: #64b5f6;
+}
+
+.value {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #bbdefb;
+  font-weight: bold;
+  font-size: 100px;
+}
