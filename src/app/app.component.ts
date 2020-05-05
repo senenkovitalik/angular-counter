@@ -34,11 +34,11 @@ export class CounterComponent  {
     this.counted.emit(nextValue);
   }
 
-  private showDropdown() {
+  private showDropdown(): void {
     this.isDropdownShown = true;
   }
 
-  private hideDropdown() {
+  private hideDropdown(): void {
     this.isDropdownShown = false;
   }
 
@@ -51,6 +51,7 @@ export class CounterComponent  {
 
   private handleClick(val: string): void {
     this.currentValue = parseInt(val, 10);
+    this.counted.emit(this.currentValue);
     this.hideDropdown();
   }
 }
