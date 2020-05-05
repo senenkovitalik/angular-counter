@@ -1,13 +1,21 @@
 <div class="counter">
-  <div class="triangle_container">
-    <div class="triangle_body triangle_up" (click)="up()"></div>
-  </div>
+	<div class="triangle_container">
+		<div class="triangle_body triangle_up" (click)="up()"></div>
+	</div>
 
-  <div>
-    <span class="value">{{currentValue}}</span>
-  </div>
+	<div (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
+		<div class="value">
+			<span>{{currentValue}}</span>
+		</div>
 
-  <div class="triangle_container">
-    <div class="triangle_body triangle_down" (click)="down()"></div>
-  </div>
+		<ul [class.dropdown_shown]="isDropdownShown" class="dropdown">
+			<li *ngFor="let i of getValues();" (click)="handleClick(i)">
+				<span>{{i}}</span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="triangle_container">
+		<div class="triangle_body triangle_down" (click)="down()"></div>
+	</div>
 </div>
